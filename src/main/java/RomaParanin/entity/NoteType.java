@@ -1,4 +1,4 @@
-package oceanwd.entity;
+package RomaParanin.entity;
 
 public enum NoteType {
     NOTE,

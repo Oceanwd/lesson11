@@ -1,4 +1,4 @@
-package oceanwd;
+package RomaParanin;
 
 import static org.junit.Assert.assertTrue;
 

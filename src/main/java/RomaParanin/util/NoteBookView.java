@@ -1,7 +1,7 @@
-package oceanwd.util;
+package RomaParanin.util;
 
-import oceanwd.entity.Note;
-import oceanwd.entity.NoteBook;
+import RomaParanin.entity.Note;
+import RomaParanin.entity.NoteBook;
 
 public abstract class NoteBookView {
     public abstract void print(Note note);

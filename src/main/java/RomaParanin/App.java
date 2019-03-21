@@ -1,8 +1,8 @@
-package oceanwd;
+package RomaParanin;
 
-import oceanwd.entity.Note;
-import oceanwd.util.InMemoryNoteBookProvider;
-import oceanwd.util.NoteBookView;
+import RomaParanin.entity.Note;
+import RomaParanin.util.InMemoryNoteBookProvider;
+import RomaParanin.util.NoteBookView;
 
 public class App 
 {

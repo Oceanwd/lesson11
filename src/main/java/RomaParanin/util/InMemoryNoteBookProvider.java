@@ -1,8 +1,8 @@
-package oceanwd.util;
+package RomaParanin.util;
 
-import oceanwd.entity.Note;
-import oceanwd.entity.NoteBook;
-import oceanwd.entity.NoteType;
+import RomaParanin.entity.Note;
+import RomaParanin.entity.NoteBook;
+import RomaParanin.entity.NoteType;
 
 import java.util.Date;
 import java.util.Random;

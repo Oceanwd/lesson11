@@ -1,4 +1,4 @@
-package oceanwd.entity;
+package RomaParanin.entity;
 
 import java.util.Arrays;
 
