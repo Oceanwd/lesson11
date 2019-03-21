@@ -3,11 +3,8 @@ package oceanwd.util;
 import oceanwd.entity.Note;
 import oceanwd.entity.NoteBook;
 
-public class NoteBookConsoleView {
-
-    public static void print(Note note){
-        System.out.println(note.toString());
-    }
+public abstract class NoteBookView {
+    public abstract void print(Note note);
 
     public static void print(Note... notes){
         for(Note note : notes){

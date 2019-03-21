@@ -1,24 +1,30 @@
 package oceanwd;
 
-import oceanwd.util.NoteBookConsoleView;
-import oceanwd.util.NoteBookProvider;
+import oceanwd.entity.Note;
+import oceanwd.util.InMemoryNoteBookProvider;
+import oceanwd.util.NoteBookView;
 
 public class App 
 {
     public static void main( String[] args )
     {
-        NoteBookProvider instance = NoteBookProvider.getInstance();
+        InMemoryNoteBookProvider instance = InMemoryNoteBookProvider.getInstance();
+        NoteBookView NBV = new NoteBookView() {
+            public void print(Note note) {
+                System.out.println(note.toString());
+            }
+        };
 
         System.out.println("- Случайная запись -");
-        NoteBookConsoleView.print(instance.getRandomNote());
+        NBV.print(instance.getRandomNote());
 
         System.out.println("- Несколько случайных записей -");
-        NoteBookConsoleView.print(instance.getRandomNote(), instance.getRandomNote(), instance.getRandomNote());
+        NBV.print(instance.getRandomNote(), instance.getRandomNote(), instance.getRandomNote());
 
         System.out.println("- Случайный блокнот -");
-        NoteBookConsoleView.print(instance.getRandomNoteBook());
+        NBV.print(instance.getRandomNoteBook());
 
         System.out.println("- Все блокноты -");
-        NoteBookConsoleView.print(instance.getNoteBooks());
+        NBV.print(instance.getNoteBooks());
     }
 }
