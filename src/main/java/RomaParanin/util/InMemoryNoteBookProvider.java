@@ -4,12 +4,12 @@ import RomaParanin.entity.Note;
 import RomaParanin.entity.NoteBook;
 import RomaParanin.entity.NoteType;
 
-import java.util.Date;
 import java.util.Random;
 
 public class InMemoryNoteBookProvider implements NoteBookProvider{
     private static InMemoryNoteBookProvider instance;
-    private InMemoryNoteBookProvider(){};
+    DateSetter date = DateSetter.getDateSetterInstance();
+    private InMemoryNoteBookProvider(){}
 
     public static InMemoryNoteBookProvider getInstance(){
         if(instance == null){
@@ -23,16 +23,16 @@ public class InMemoryNoteBookProvider implements NoteBookProvider{
     {
         noteBook = new NoteBook[]{
             new NoteBook(new Note[]{
-                new Note("Запись 1", new Date(), NoteType.NOTE),
-                new Note("Запись 2", new Date(), NoteType.NOTE)
+                new Note("Запись 1", date.getDate(), NoteType.NOTE),
+                new Note("Запись 2", date.getDate(), NoteType.NOTE)
             }),
             new NoteBook(new Note[]{
-                new Note("Запись 3", new Date(), NoteType.NOTE),
-                new Note("Запись 4", new Date(), NoteType.NOTE)
+                new Note("Запись 3", date.getDate(), NoteType.NOTE),
+                new Note("Запись 4", date.getDate(), NoteType.NOTE)
             }),
             new NoteBook(new Note[]{
-                new Note("Запись 5", new Date(), NoteType.NOTE),
-                new Note("Запись 6", new Date(), NoteType.NOTE)
+                new Note("Запись 5", date.getDate(), NoteType.NOTE),
+                new Note("Запись 6", date.getDate(), NoteType.NOTE)
             })
         };
     }

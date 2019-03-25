@@ -1,15 +1,14 @@
 package RomaParanin.entity;
 
-import java.util.Date;
 import java.util.Objects;
 
 public class Note {
 
     private String text;
-    private Date date;
+    private String date;
     private NoteType noteType;
 
-    public Note (String text, Date date, NoteType noteType){
+    public Note (String text, String date, NoteType noteType){
         this.text = text;
         this.date = date;
         this.noteType = noteType;
